@@ -152,7 +152,7 @@ export default function About() {
                 </Badge>
               </Row>
             )}
-            <Heading className={styles.textAlign} variant="display-strong-xl">
+            <Heading className={`${styles.textAlign} ${styles.myNameStyle}`} variant="display-strong-l">
               {person.name}
             </Heading>
             <Text

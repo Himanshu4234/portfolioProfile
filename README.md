@@ -1,4 +1,4 @@
-# 👨‍💻 Prashant Singh — Frontend Developer Portfolio
+# 👨‍💻 Himanshu Singh  Chauhan— Frontend Developer Portfolio
 
 Welcome to my personal portfolio!  
 This site showcases my featured projects, technical expertise, and journey as a **Frontend Developer** passionate about creating scalable, performant, and user-focused web applications.
@@ -7,7 +7,7 @@ This site showcases my featured projects, technical expertise, and journey as a 
 
 ## 🚀 About Me
 
-Hi, I’m **Prashant Singh**, a Frontend Developer from India.  
+Hi, I’m **Himanshu Singh  Chauhan**, a Frontend Developer from India.  
 I specialize in building **modern React and Next.js applications** with clean architecture, strong performance, and great user experiences.
 
 I enjoy solving real-world problems through code, designing modular systems, and working on projects that bridge design with development.
@@ -17,7 +17,7 @@ I enjoy solving real-world problems through code, designing modular systems, and
 ## 🧠 Tech Stack
 
 **Frontend Frameworks:**  
-React.js, Next.js, Vite, TypeScript, JavaScript (ES6+)
+React.js, Vite, TypeScript, JavaScript (ES6+)
 
 **Styling & UI:**  
 Tailwind CSS, Styled Components, Material UI, Figma
@@ -38,7 +38,7 @@ Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Himanshu4234/portfolio.git
    ```
 
 2. Navigate into the project directory:
@@ -69,9 +69,9 @@ Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 
 ## 📬 Contact
 
-📧 **Email:** [prashant.singh181@gmail.com](mailto:prashant.singh181@gmail.com)
+📧 **Email:** [himanshuchauhan85.hc@gmail.com](mailto:himanshuchauhan85.hc@gmail.com)
 
-🔗 **LinkedIn:** [linkedin.com/in/prashantsingh181](https://www.linkedin.com/in/prashantsingh181/)
+🔗 **LinkedIn:** [linkedin.com/in/himanshu-chauhan-6828b116a](https://www.linkedin.com/in/himanshu-chauhan-6828b116a/)
 
 💻 **Portfolio:** [prashant-singh-portfolio.vercel.app](https://prashant-singh-portfolio.vercel.app/)
 

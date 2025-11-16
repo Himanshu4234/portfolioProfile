@@ -11,16 +11,16 @@ import {
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Prashant",
-  lastName: "Singh",
-  name: `Prashant Singh`,
-  role: "Software Engineer",
-  avatar: "/images/avatar.jpeg",
-  email: "prashant.singh181@gmail.com",
-  state: "Uttar Pradesh/India",
-  mobileNumber: "+91 9990608554",
-  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Hindi"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Himanshu",
+  lastName: "Chauhan",
+  name: `Himanshu Singh Chauhan`,
+  role: "Frontend Developer",
+  avatar: "/images/avatars.jpeg",
+  email: "himanshuchauhan85.hc@gmail.com",
+  state: "Haryana, India",
+  mobileNumber: "+91 9654801167",
+  location: "Asia/Kolkata",
+  languages: ["English", "Hindi"],
 };
 
 const newsletter: Newsletter = {
@@ -30,23 +30,16 @@ const newsletter: Newsletter = {
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/prashantsingh181",
+    link: "https://github.com/Himanshu4234",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/prashantsingh181/",
+    link: "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
   },
-  // {
-  //   name: "Threads",
-  //   icon: "threads",
-  //   link: "https://www.threads.com/@once_ui",
-  // },
   {
     name: "Email",
     icon: "email",
@@ -65,20 +58,20 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Download</strong>{" "}
+        <strong className="ml-4">Download</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           My Resume
         </Text>
       </Row>
     ),
-    href: "/Prashant-Singh-Frontend-Resume.pdf",
+    href: "/Himanshu-Singh-Chauhan-Resume.pdf",
   },
   subline: (
     <>
-      I'm Prashant Singh, a Frontend Developer from India passionate about
-      building dynamic and intuitive web applications using React, Next.js,
-      Javascript and Typescript.
+      I'm {person.name}, a Frontend Developer from India with 3 years of
+      experience building scalable, high-performance web applications using
+      React, TypeScript, JavaScript, Redux, and modern tooling.
     </>
   ),
 };
@@ -97,10 +90,10 @@ const about: About = {
   },
   resume: {
     display: true,
-    link: "/Prashant-Singh-Frontend-Resume.pdf",
+    link: "/Himanshu-Singh-Chauhan-Resume.pdf",
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Download</strong>{" "}
+        <strong className="ml-4">Download</strong>
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           My Resume
@@ -108,220 +101,132 @@ const about: About = {
       </Row>
     ),
   },
+
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Frontend Developer with 3+ years of experience building scalable,
-        high-performance web applications. Proficient in React, Next.js,
-        TypeScript, and modern JavaScript, with expertise in creating responsive
-        UIs and optimizing performance. Adept at enhancing user experience,
-        collaborating with cross-functional teams, and mentoring junior
-        developers
+        Frontend Developer with 3 years of experience building scalable,
+        high-performance web applications. Proficient in React, TypeScript,
+        JavaScript (ES6+), Redux, Context API, and TanStack Query. Skilled in
+        creating responsive UIs, improving Core Web Vitals, SEO, and delivering
+        clean, maintainable code.
       </>
     ),
   },
+
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "Blink Corps",
-        timeframe: "July, 2024 - Present",
+        company: "Hocalwire Labs Pvt Ltd",
+        timeframe: "Jan 2023 – Present",
         role: "Software Engineer",
         achievements: [
           <>
-            Directed the frontend architecture for 3 enterprise-level
-            applications, reducing development time by 25% through modular
-            Next.js components.
+            Directed frontend architecture for 3 enterprise-level applications,
+            reducing development time by 25% using modular React + Next.js
+            components.
           </>,
           <>
-            Collaborated with UI/UX designers to translate Figma prototypes into
-            responsive, pixel-perfect layouts with Tailwind CSS.
+            Developed responsive, pixel-perfect interfaces using Tailwind CSS
+            and Figma designs.
           </>,
           <>
-            Mentored 2 junior developers and conducted code reviews to enforce
-            best practices in TypeScript, React, and Next.js.
+            Mentored junior developers and enforced best practices for React,
+            TypeScript, and component patterns.
           </>,
           <>
-            Applied performance optimization (bundle analysis, lazy loading,
-            image compression), boosting Lighthouse performance scores by 35%
-            and reducing page load time to under 2s.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "POD IT Services",
-        timeframe: "October, 2023 - June, 2024",
-        role: "Software Developer",
-        achievements: [
-          <>
-            Independently handled frontend development for 3 websites,
-            overseeing the entire process from design implementation to
-            deployment.
-          </>,
-          <>
-            Utilized JavaScript, React, Svelte, and other frontend technologies
-            to create responsive and user-friendly interfaces that met client
-            specifications and quality standards.
-          </>,
-          <>
-            Aligned frontend efforts with project objectives in collaboration
-            with backend developers and designers.
-          </>,
-          <>
-            Offered mentorship to 3 recent hires, providing guidance on frontend
-            development best practices, coding standards, and project workflows.
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "GlobalLogic Technologies",
-        timeframe: "March, 2022 - July, 2023",
-        role: "Software Engineer",
-        achievements: [
-          <>
-            Developed and maintained frontend components in React and
-            JavaScript, enhancing website functionality and user experience.
-            Implemented new features and optimized existing code to meet project
-            and client requirements.
-          </>,
-          <>
-            Designed and engineered HTML/JavaScript extractors to streamline
-            merchant data extraction, improving task completion speed by 20%.
-          </>,
-          <>
-            Queried and validated data from a database of 2M+ records using SQL
-            to ensure accuracy of extracted information.
-          </>,
-          <>
-            Trained and guided 11 new team members in proprietary tools, defect
-            resolution, and feature implementation
-          </>,
-          <>
-            Recognized for initiative in problem identification, discussion, and
-            resolution.
+            Optimized bundle size, lazy-loaded components, and implemented image
+            compression—boosting Lighthouse scores by 35%.
           </>,
         ],
         images: [],
       },
     ],
   },
+
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "SRM Institute of Science and Technology",
-        description: (
-          <>
-            Completed Bachelors of Technology in Computer Science and
-            Engineering.
-          </>
-        ),
+        name: "DAV Centenary College",
+        description: <>Bachelor in Computer Science</>,
       },
-      // {
-      //   name: "Build the Future",
-      //   description: <>Studied online marketing and personal branding.</>,
-      // },
+      {
+        name: "AD Senior Secondary School",
+        description: <>Completed HSC & SSC</>,
+      },
     ],
   },
+
   projects: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Projects",
     projects: [
       {
-        title: "Busly",
-        link: "https://busly.netlify.app/",
-        github: "https://github.com/prashantsingh181/busly",
+        title: "Shopperce App & Admin",
+        link: "https://shopperce.ai/",
+        github: "https://github.com/Himanshu4234",
         description: (
           <>
-            Busly is a modern web application built with React + Vite for
-            managing and booking buses. It follows a scalable folder structure
-            with reusable components, context management, utilities, and type
-            safety using TypeScript.
+            A customizable eCommerce platform enabling partners to create
+            personalized storefronts. Built dynamic routing & theming using
+            React + React Router. Admin dashboards allow sellers to manage
+            orders, products, categories & analytics.
           </>
         ),
         tags: [
-          {
-            name: "React",
-            icon: "react",
-          },
-          {
-            name: "Vite",
-            icon: "vite",
-          },
-          {
-            name: "Typescript",
-            icon: "typescript",
-          },
-          {
-            name: "Tailwind",
-            icon: "tailwind",
-          },
-          {
-            name: "React Router",
-            icon: "reactrouter",
-          },
+          { name: "React", icon: "react" },
+          { name: "Vite", icon: "vite" },
+          { name: "Typescript", icon: "typescript" },
+          { name: "Tailwind", icon: "tailwind" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/busly/busly-01.png",
-            alt: "Busly Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/busly/busly-02.png",
-            alt: "Busly Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
+  
       {
-        title: "Build Board",
-        link: "https://build-board-seven.vercel.app/",
-        github: "https://github.com/prashantsingh181/build-board",
+        title: "LiveLaw — Legal News Platform",
+        link: "https://www.livelaw.in/",
+        github: "https://github.com/Himanshu4234",
         description: (
           <>
-            BuildBoard is an article-based platform that lets makers document
-            and share their builds, ideas, and creative processes.
+            Worked on LiveLaw, India’s leading legal journalism platform providing
+            court news, case updates, and subscription-based premium legal content.
+            Developed high-performance UI components, improved SEO structure,
+            optimized rendering for article-heavy pages, and implemented dynamic,
+            scalable layouts to support large volumes of daily news updates.
           </>
         ),
         tags: [
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Typescript",
-            icon: "typescript",
-          },
-          {
-            name: "Tailwind",
-            icon: "tailwind",
-          },
+          { name: "React", icon: "react" },
+          { name: "Typescript", icon: "typescript" },
+          { name: "Tailwind", icon: "tailwind" },
+          { name: "React Router", icon: "reactrouter" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/build-board/build-board-01.png",
-            alt: "Build Board Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/build-board/build-board-02.png",
-            alt: "Build Board Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+  
+      {
+        title: "NextLeap IT Solutions — Corporate Platform",
+        link: "https://nextleapitsolutions.netlify.app/",
+        github: "https://github.com/Himanshu4234",
+        description: (
+          <>
+            Built a scalable IT services website using React + TypeScript.
+            Implemented SEO strategies, improved TTFB by 30%, and created
+            modular, API-driven pages with mobile-first design.
+          </>
+        ),
+        tags: [
+          { name: "React", icon: "react" },
+          { name: "Typescript", icon: "typescript" },
+          { name: "Tailwind", icon: "tailwind" },
         ],
+        images: [],
       },
     ],
   },
@@ -331,9 +236,7 @@ const blog: Blog = {
   path: "/blog",
   label: "Blog",
   title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  description: `Read what ${person.name} has been working on recently`,
 };
 
 const work: Work = {
@@ -341,8 +244,6 @@ const work: Work = {
   label: "Work",
   title: `Projects – ${person.name}`,
   description: `Projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
@@ -350,8 +251,6 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
@@ -360,36 +259,6 @@ const gallery: Gallery = {
     },
     {
       src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
       alt: "image",
       orientation: "vertical",
     },
