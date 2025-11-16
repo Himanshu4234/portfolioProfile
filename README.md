@@ -73,6 +73,6 @@ Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 
 🔗 **LinkedIn:** [linkedin.com/in/himanshu-chauhan-6828b116a](https://www.linkedin.com/in/himanshu-chauhan-6828b116a/)
 
-💻 **Portfolio:** [prashant-singh-portfolio.vercel.app](https://prashant-singh-portfolio.vercel.app/)
+💻 **Portfolio:** [himanshu-sing-chauhan-portfolio.netlify.app](https://himanshusinghchauhanportfolio.netlify.app/)
 
 ---
