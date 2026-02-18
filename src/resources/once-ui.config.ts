@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://prashant-singh-portfolio.vercel.app";
+const baseURL: string = "https://himanshusinghchauhanportfolio.netlify.app";
 
 const routes: RoutesConfig = {
   "/": true,
