@@ -15,10 +15,10 @@
     "@once-ui-system/core": "^1.4.27",
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
-    "eslint-config-next": "^16.0.3",
+    "eslint-config-next": "^0.2.4",
     "gray-matter": "^2.0.1",
     "lint-staged": "^16.1.5",
-    "next": "^15.3.1",
+    "next": "^16.1.6",
     "next-mdx-remote": "^5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -32,7 +32,7 @@
     "@types/node": "^20.17.30",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "eslint": "^9.25.0",
+    "eslint": "^10.0.0",
     "typescript": "^5.8.3",
     "tzdata": "^1.0.44"
   }
