@@ -14,6 +14,7 @@
     "@next/mdx": "^15.3.1",
     "@once-ui-system/core": "^1.4.27",
     "classnames": "^2.5.1",
+    "coffee-script": "^1.12.7",
     "cookie": "^1.0.2",
     "eslint-config-next": "^0.2.4",
     "gray-matter": "^2.0.1",
