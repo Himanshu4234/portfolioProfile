@@ -41,6 +41,11 @@ const social: Social = [
     link: "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
   },
   {
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/himanshu_chauhan0107",
+  },
+  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,

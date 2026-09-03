@@ -47,6 +47,7 @@ export default async function RootLayout({
       )}
     >
       <head>
+        <meta name="google-site-verification" content="L5lW-LRoQ1QhXWIQn3-DCkvktkMga54qTacdsex-sIw" />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{

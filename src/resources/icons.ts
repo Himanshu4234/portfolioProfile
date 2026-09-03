@@ -45,6 +45,7 @@ import {
   FaReddit,
   FaTelegram,
   FaReact,
+  FaInstagram,
 } from "react-icons/fa6";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { FaMobileAlt } from "react-icons/fa";
@@ -66,6 +67,7 @@ export const iconLibrary: Record<string, IconType> = {
   eyeOff: HiOutlineEyeSlash,
   github: FaGithub,
   linkedin: FaLinkedin,
+  instagram: FaInstagram,
   x: FaX,
   twitter: FaXTwitter,
   mobile: FaMobileAlt,

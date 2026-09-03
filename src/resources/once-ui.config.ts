@@ -186,18 +186,18 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "",
-  type: "Organization",
-  name: "Once UI",
+  logo: "/images/avatars.jpeg",
+  type: "Person",
+  name: "Himanshu Singh Chauhan",
   description: home.description,
-  email: "lorant@once-ui.com",
+  email: "himanshuchauhan85.hc@gmail.com",
 };
 
-// social links
+// social links for search engines (JSON-LD SameAs)
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  linkedin: "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
+  github: "https://github.com/Himanshu4234",
+  instagram: "https://www.instagram.com/himanshu_chauhan0107",
 };
 
 // social sharing configuration for blog posts
