@@ -56,8 +56,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.webp",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `${person.name} | Senior Frontend Engineer Portfolio`,
+  description: `Official portfolio website of ${person.name}, Senior Frontend Engineer with 3+ years experience building React, Next.js, and TypeScript web applications.`,
   headline: <>Crafting seamless experiences with clean, scalable code</>,
   featured: {
     display: true,
@@ -74,7 +74,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.name}, a Frontend Developer from India with 3 years of
+      I'm {person.name}, a Senior Frontend Developer from India with 3+ years of
       experience building scalable, high-performance web applications using
       React, TypeScript, JavaScript, Redux, and modern tooling.
     </>
@@ -84,8 +84,8 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.state}`,
+  title: `About ${person.name} | Senior Frontend Engineer`,
+  description: `Meet ${person.name}, Senior Frontend Engineer & Developer from ${person.state}. Experience in React, Next.js, and TypeScript architecture.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -112,7 +112,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Frontend Developer with 3 years of experience building scalable,
+        Frontend Developer with 3+ years of experience building scalable,
         high-performance web applications. Proficient in React, TypeScript,
         JavaScript (ES6+), Redux, Context API, and TanStack Query. Skilled in
         creating responsive UIs, improving Core Web Vitals, SEO, and delivering

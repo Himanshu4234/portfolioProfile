@@ -48,6 +48,98 @@ export default async function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="L5lW-LRoQ1QhXWIQn3-DCkvktkMga54qTacdsex-sIw" />
+        <link rel="canonical" href={baseURL} />
+        <script
+          type="application/ld+json"
+          id="schema-architecture-graph"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": `${baseURL}/#person`,
+                  "name": "Himanshu Singh Chauhan",
+                  "givenName": "Himanshu",
+                  "familyName": "Chauhan",
+                  "jobTitle": "Senior Frontend Engineer",
+                  "url": baseURL,
+                  "image": `${baseURL}/images/avatars.jpeg`,
+                  "sameAs": [
+                    "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
+                    "https://www.instagram.com/himanshu_chauhan0107",
+                    "https://github.com/Himanshu4234"
+                  ],
+                  "worksFor": {
+                    "@type": "Organization",
+                    "name": "Hocalwire Labs"
+                  },
+                  "knowsAbout": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "Redux",
+                    "Tailwind CSS",
+                    "SEO & Core Web Vitals"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": `${baseURL}/#website`,
+                  "url": baseURL,
+                  "name": "Himanshu Singh Chauhan Portfolio",
+                  "description": "Official Portfolio Website of Himanshu Singh Chauhan - Senior Frontend Engineer",
+                  "publisher": {
+                    "@id": `${baseURL}/#person`
+                  },
+                  "hasPart": [
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/about`,
+                      "name": "About - Himanshu Singh Chauhan",
+                      "url": `${baseURL}/about`
+                    },
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/work`,
+                      "name": "Projects & Work - Himanshu Singh Chauhan",
+                      "url": `${baseURL}/work`
+                    }
+                  ]
+                },
+                {
+                  "@type": "ItemList",
+                  "@id": `${baseURL}/#projects`,
+                  "name": "Featured Software Applications",
+                  "itemListElement": [
+                    {
+                      "@type": "SoftwareApplication",
+                      "name": "LiveLaw — Legal News Platform",
+                      "url": "https://www.livelaw.in/",
+                      "operatingSystem": "Web",
+                      "applicationCategory": "NewsApplication"
+                    },
+                    {
+                      "@type": "SoftwareApplication",
+                      "name": "Shopperce AI — Multi-Tenant E-Commerce Platform",
+                      "url": "https://shopperce.ai/",
+                      "operatingSystem": "Web",
+                      "applicationCategory": "BusinessApplication"
+                    },
+                    {
+                      "@type": "SoftwareApplication",
+                      "name": "NextLeap IT Solutions — Corporate Platform",
+                      "url": "https://nextleapitsolutions.netlify.app/",
+                      "operatingSystem": "Web",
+                      "applicationCategory": "BusinessApplication"
+                    }
+                  ]
+                }
+              ]
+            })
+          }}
+        />
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
