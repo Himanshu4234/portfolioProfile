@@ -38,7 +38,7 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
+    link: "https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/",
   },
   {
     name: "Instagram",
@@ -56,9 +56,9 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.webp",
   label: "Home",
-  title: `${person.name} | Senior Frontend Engineer Portfolio`,
-  description: `Official portfolio website of ${person.name}, Senior Frontend Engineer with 3+ years experience building React, Next.js, and TypeScript web applications.`,
-  headline: <>Crafting seamless experiences with clean, scalable code</>,
+  title: `${person.name} | Frontend Engineer`,
+  description: `Official portfolio of ${person.name}, Frontend Engineer specializing in React.js, Next.js, and TypeScript with 3+ years of experience building high-performance web applications.`,
+  headline: person.name,
   featured: {
     display: true,
     title: (
@@ -74,9 +74,9 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.name}, a Senior Frontend Developer from India with 3+ years of
-      experience building scalable, high-performance web applications using
-      React, TypeScript, JavaScript, Redux, and modern tooling.
+      Frontend Engineer with 3+ years of experience building scalable,
+      high-performance web applications using React.js, Next.js, TypeScript,
+      JavaScript, and modern web architecture.
     </>
   ),
 };

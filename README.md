@@ -1,4 +1,4 @@
-# 👨‍💻 Himanshu Singh  Chauhan— Frontend Developer Portfolio
+# 👨‍💻 Himanshu Singh Chauhan — Frontend Developer Portfolio
 
 Welcome to my personal portfolio!  
 This site showcases my featured projects, technical expertise, and journey as a **Frontend Developer** passionate about creating scalable, performant, and user-focused web applications.
@@ -7,7 +7,7 @@ This site showcases my featured projects, technical expertise, and journey as a 
 
 ## 🚀 About Me
 
-Hi, I’m **Himanshu Singh  Chauhan**, a Frontend Developer from India.  
+Hi, I’m **Himanshu Singh Chauhan**, a Frontend Developer from India.  
 I specialize in building **modern React and Next.js applications** with clean architecture, strong performance, and great user experiences.
 
 I enjoy solving real-world problems through code, designing modular systems, and working on projects that bridge design with development.
@@ -71,7 +71,7 @@ Git, GitHub, Vercel, ESLint, Prettier, Storybook, Sentry
 
 📧 **Email:** [himanshuchauhan85.hc@gmail.com](mailto:himanshuchauhan85.hc@gmail.com)
 
-🔗 **LinkedIn:** [linkedin.com/in/himanshu-chauhan-6828b116a](https://www.linkedin.com/in/himanshu-chauhan-6828b116a/)
+🔗 **LinkedIn:** [linkedin.com/in/himanshu-singh-chauhan-6828b116a](https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/)
 
 💻 **Portfolio:** [himanshu-sing-chauhan-portfolio.netlify.app](https://himanshusinghchauhanportfolio.netlify.app/)
 

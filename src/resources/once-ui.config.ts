@@ -195,7 +195,7 @@ const schema: SchemaConfig = {
 
 // social links for search engines (JSON-LD SameAs)
 const sameAs: SameAsConfig = {
-  linkedin: "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
+  linkedin: "https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/",
   github: "https://github.com/Himanshu4234",
   instagram: "https://www.instagram.com/himanshu_chauhan0107",
 };

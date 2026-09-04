@@ -62,11 +62,12 @@ export default async function RootLayout({
                   "name": "Himanshu Singh Chauhan",
                   "givenName": "Himanshu",
                   "familyName": "Chauhan",
-                  "jobTitle": "Senior Frontend Engineer",
+                  "jobTitle": "Frontend Engineer",
                   "url": baseURL,
                   "image": `${baseURL}/images/avatars.jpeg`,
                   "sameAs": [
-                    "https://www.linkedin.com/in/himanshu-chauhan-6828b116a/",
+                    baseURL,
+                    "https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/",
                     "https://www.instagram.com/himanshu_chauhan0107",
                     "https://github.com/Himanshu4234"
                   ],
@@ -75,7 +76,8 @@ export default async function RootLayout({
                     "name": "Hocalwire Labs"
                   },
                   "knowsAbout": [
-                    "React",
+                    "Frontend Engineer",
+                    "React.js",
                     "Next.js",
                     "TypeScript",
                     "JavaScript",
@@ -85,11 +87,21 @@ export default async function RootLayout({
                   ]
                 },
                 {
+                  "@type": "ProfilePage",
+                  "@id": `${baseURL}/#profilepage`,
+                  "url": baseURL,
+                  "name": "Himanshu Singh Chauhan | Frontend Engineer",
+                  "description": "Official portfolio of Himanshu Singh Chauhan, Frontend Engineer specializing in React.js, Next.js, and TypeScript.",
+                  "mainEntity": {
+                    "@id": `${baseURL}/#person`
+                  }
+                },
+                {
                   "@type": "WebSite",
                   "@id": `${baseURL}/#website`,
                   "url": baseURL,
-                  "name": "Himanshu Singh Chauhan Portfolio",
-                  "description": "Official Portfolio Website of Himanshu Singh Chauhan - Senior Frontend Engineer",
+                  "name": "Himanshu Singh Chauhan | Frontend Engineer",
+                  "description": "Official portfolio of Himanshu Singh Chauhan, Frontend Engineer specializing in React.js, Next.js, and TypeScript.",
                   "publisher": {
                     "@id": `${baseURL}/#person`
                   },
