@@ -15,7 +15,7 @@ const person: Person = {
   lastName: "Chauhan",
   name: `Himanshu Singh Chauhan`,
   role: "Frontend Developer",
-  avatar: "/images/avatars.jpeg",
+  avatar: "/images/himanshu.jpeg",
   email: "himanshuchauhan85.hc@gmail.com",
   state: "Haryana, India",
   mobileNumber: "+91 9654801167",
@@ -172,6 +172,34 @@ const about: About = {
     display: true,
     title: "Projects",
     projects: [
+      {
+        title: "Kiska Kitna Hisab — Expense Splitter & UPI Settle App",
+        link: "https://kiskakitnahisab.netlify.app/",
+        github: "https://github.com/Himanshu4234",
+        description: (
+          <>
+            A full-stack Splitwise-inspired group expense tracker built with React, TypeScript,
+            and Supabase backend (PostgreSQL database & Auth). Features itemised expense logging,
+            Row Level Security (RLS), greedy debt simplification algorithms, and instant UPI payment link
+            & QR code generation for 1-click settlements via Google Pay, PhonePe, and Paytm.
+          </>
+        ),
+        tags: [
+          { name: "React", icon: "react" },
+          { name: "Supabase", icon: "database" },
+          { name: "Typescript", icon: "typescript" },
+          { name: "Tailwind", icon: "tailwind" },
+          { name: "Vite", icon: "vite" },
+        ],
+        images: [
+          {
+            src: "/images/projects/kiskakitnahisab/kiskakitnahisab-01.png",
+            alt: "Kiska Kitna Hisab Application Screenshot",
+            width: 1200,
+            height: 675,
+          },
+        ],
+      },
       {
         title: "Shopperce App & Admin",
         link: "https://shopperce.ai/",

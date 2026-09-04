@@ -35,5 +35,20 @@ export default async function sitemap() {
     priority: route === "/" ? 1.0 : 0.9,
   }));
 
-  return [...routes, ...works, ...blogs];
+  const imageEntries = [
+    {
+      url: `${baseURL}/images/himanshu.jpeg`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseURL}/favicon.ico`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+  ];
+
+  return [...routes, ...works, ...blogs, ...imageEntries];
 }

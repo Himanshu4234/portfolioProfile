@@ -2,7 +2,7 @@
 import "@once-ui-system/core/css/styles.css";
 // @ts-ignore: side-effect import without type declarations
 import "@once-ui-system/core/css/tokens.css";
-// import "@/resources/custom.css";
+import "@/resources/custom.css";
 
 import classNames from "classnames";
 
@@ -49,6 +49,32 @@ export default async function RootLayout({
       <head>
         <meta name="google-site-verification" content="L5lW-LRoQ1QhXWIQn3-DCkvktkMga54qTacdsex-sIw" />
         <link rel="canonical" href={baseURL} />
+        
+        {/* Favicons & PWA Manifest for Mobile App Install */}
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Himanshu" />
+        <meta name="theme-color" content="#06b6d4" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
+        {/* Indexing & Rich Search Snippets */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        {/* OpenGraph & Social Image */}
+        <meta property="og:image" content={`${baseURL}/images/himanshu.jpeg`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Himanshu Singh Chauhan - Senior Frontend Engineer" />
+        <meta name="twitter:image" content={`${baseURL}/images/himanshu.jpeg`} />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <script
           type="application/ld+json"
           id="schema-architecture-graph"
@@ -62,9 +88,9 @@ export default async function RootLayout({
                   "name": "Himanshu Singh Chauhan",
                   "givenName": "Himanshu",
                   "familyName": "Chauhan",
-                  "jobTitle": "Frontend Engineer",
+                  "jobTitle": "Senior Frontend Engineer",
                   "url": baseURL,
-                  "image": `${baseURL}/images/avatars.jpeg`,
+                  "image": `${baseURL}/images/himanshu.jpeg`,
                   "sameAs": [
                     baseURL,
                     "https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/",
@@ -125,6 +151,13 @@ export default async function RootLayout({
                   "@id": `${baseURL}/#projects`,
                   "name": "Featured Software Applications",
                   "itemListElement": [
+                    {
+                      "@type": "SoftwareApplication",
+                      "name": "Kiska Kitna Hisab — Split Expenses & Settle Over UPI",
+                      "url": "https://kiskakitnahisab.netlify.app/",
+                      "operatingSystem": "Web",
+                      "applicationCategory": "FinanceApplication"
+                    },
                     {
                       "@type": "SoftwareApplication",
                       "name": "LiveLaw — Legal News Platform",

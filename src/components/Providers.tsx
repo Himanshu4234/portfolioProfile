@@ -20,7 +20,19 @@ import {
 import { style, dataStyle } from "../resources";
 import { iconLibrary } from "../resources/icons";
 
+import { useEffect } from "react";
+
 export function Providers({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    if (typeof window !== "undefined" && "serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((reg) => console.log("PWA Service Worker registered:", reg.scope))
+          .catch((err) => console.error("PWA Service Worker registration error:", err));
+      });
+    }
+  }, []);
   return (
     <LayoutProvider>
       <ThemeProvider

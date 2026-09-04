@@ -1,0 +1,52 @@
+---
+title: "Kiska Kitna Hisab — Expense Splitter & UPI Payment App"
+publishedAt: "2025-01-15"
+summary: "A full-stack Splitwise-inspired expense splitting application built with React, TypeScript, and Supabase (PostgreSQL Database & Auth). Features Row Level Security (RLS), greedy debt simplification algorithms, and instant UPI payment link & QR code generation for one-click settlements via GPay, PhonePe, and Paytm."
+images:
+  - "/images/projects/kiskakitnahisab/kiskakitnahisab-01.png"
+team:
+  - name: "Himanshu Singh Chauhan"
+    role: "Frontend Engineer"
+    avatar: "/images/avatars.jpeg"
+    linkedIn: "https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/"
+---
+
+## Overview
+
+**Kiska Kitna Hisab** is a full-stack group expense-tracking web application designed to simplify shared expenses for trips, flatmates, and group events. It solves the friction of tracking who owes what by combining real-time **Supabase PostgreSQL cloud storage**, user authentication (Email & Google OAuth), and an automated **direct UPI payment link & QR code generator**.
+
+Users can create expense groups, log itemised bills, view real-time balance calculations backed by Supabase database persistence, and immediately settle balances via any Indian UPI payment app (Google Pay, PhonePe, Paytm, BHIM).
+
+## 🌐 Live Demo & Source Code
+
+- **Live Application:** [https://kiskakitnahisab.netlify.app/](https://kiskakitnahisab.netlify.app/)
+- **GitHub Repository:** [https://github.com/Himanshu4234](https://github.com/Himanshu4234)
+
+## Key Features
+
+- **Full-Stack Supabase Integration**: Powered by Supabase for real-time PostgreSQL database storage, row-level security (RLS), and instant data synchronization across group members.
+- **Supabase Authentication**: Complete Login, Signup, and Google OAuth flow with persistent session management and secure profile settings.
+- **Custom VPA / UPI ID Binding**: Users can link their personal UPI IDs (`name@upi`) to their profile so settlement links dynamically target their account.
+- **Itemised Expense Logging**: Add group expenses, assign custom splits (equal, exact amounts, or percentage-based), and track shared balances in real time.
+- **Instant UPI Payment Link & QR Generation**: Generates direct `upi://pay` deep-links and scan-to-pay QR codes pre-filled with the exact settlement amount and recipient VPA.
+- **Debt Simplification Engine**: Greedy graph algorithms minimize the total number of transactions needed among group members to settle all debts efficiently.
+- **Digital Paper Receipt UI**: A retro-modern receipt UI theme with responsive micro-interactions built using Tailwind CSS.
+
+## Technologies Used
+
+- **React.js + Vite**: Modern, ultra-fast frontend setup with fast HMR and optimized production bundles.
+- **Supabase (PostgreSQL & Auth)**: Cloud database backend, user authentication, and Row Level Security (RLS) data policies.
+- **TypeScript**: Type-safe architecture ensuring reliable debt calculations and API data structures.
+- **Tailwind CSS**: Utility-first styling for responsive layouts and custom paper-receipt design tokens.
+- **UPI Deep-Linking API & QR Generator**: Seamless client-side payment URI formatting and QR matrix rendering.
+- **Netlify**: Continuous deployment pipeline with automated edge builds.
+
+## Technical Architecture & Database Design
+
+The application utilizes Supabase's relational PostgreSQL model with tables for `profiles`, `groups`, `group_members`, and `expenses`. Row Level Security (RLS) policies enforce that users can only view and modify expenses for groups in which they are authorized members. 
+
+Calculating debt relationships across multi-member groups efficiently required designing a **greedy debt simplification algorithm** to eliminate cyclic balances (e.g. A owes B, B owes C -> A pays C directly). Cross-platform UPI deep links (`upi://pay?pa=...&am=...&cu=INR`) handle fallback behaviors across desktop web and mobile browsers smoothly.
+
+## Impact & Outcome
+
+Kiska Kitna Hisab provides a frictionless, ad-free alternative to bloated expense trackers, combining secure Supabase cloud persistence with 1-click UPI payments to reduce group settlement times dramatically.

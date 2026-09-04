@@ -272,22 +272,21 @@ export default function About() {
                       <Row
                         fillWidth
                         paddingTop="m"
-                        paddingLeft="40"
                         gap="12"
                         wrap
                       >
                         {experience.images.map((image, index) => (
                           <Row
                             key={index}
+                            fillWidth
                             border="neutral-medium"
                             radius="m"
-                            minWidth={image.width}
-                            height={image.height}
+                            style={{ overflow: "hidden" }}
                           >
                             <Media
                               enlarge
                               radius="m"
-                              sizes={image.width.toString()}
+                              aspectRatio="16 / 9"
                               alt={image.alt}
                               src={image.src}
                             />
@@ -381,15 +380,15 @@ export default function About() {
                         {project.images.map((image, index) => (
                           <Row
                             key={index}
+                            fillWidth
                             border="neutral-medium"
                             radius="m"
-                            minWidth={image.width}
-                            height={image.height}
+                            style={{ overflow: "hidden" }}
                           >
                             <Media
                               enlarge
                               radius="m"
-                              sizes={image.width.toString()}
+                              aspectRatio="16 / 9"
                               alt={image.alt}
                               src={image.src}
                             />
