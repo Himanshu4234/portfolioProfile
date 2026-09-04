@@ -42,11 +42,10 @@ export const SkillsMatrix = () => {
         </Column>
       </RevealFx>
 
-      <Row fillWidth gap="16" wrap s={{ direction: "column" }}>
+      <div className="skills-matrix-grid">
         {skillCategories.map((item, idx) => (
           <Column
             key={idx}
-            flex={1}
             padding="24"
             gap="16"
             className="glass-card"
@@ -66,7 +65,7 @@ export const SkillsMatrix = () => {
             </Row>
           </Column>
         ))}
-      </Row>
+      </div>
     </Column>
   );
 };

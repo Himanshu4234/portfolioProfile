@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Background Dark Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#040914" />
+    </linearGradient>
+    
+    <!-- Royal Cyan Accent Gradient -->
+    <linearGradient id="hGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Dark Base -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  
+  <!-- Outer Royal Ring Border -->
+  <rect x="20" y="20" width="472" height="472" rx="112" fill="none" stroke="url(#ringGrad)" stroke-width="8" opacity="0.8" />
+
+  <!-- Monogram Letter H -->
+  <g fill="url(#hGrad)">
+    <!-- Left Stem -->
+    <rect x="144" y="128" width="52" height="256" rx="12" />
+    <!-- Right Stem -->
+    <rect x="316" y="128" width="52" height="256" rx="12" />
+    <!-- Center Bar -->
+    <rect x="196" y="230" width="120" height="52" rx="8" />
+    <!-- Diamond Emblem -->
+    <polygon points="342,100 354,112 342,124 330,112" fill="#38bdf8" />
+  </g>
+</svg>

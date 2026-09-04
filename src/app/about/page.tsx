@@ -89,7 +89,7 @@ export default function About() {
             s={{ position: "relative" }}
             minWidth="160"
             paddingX="l"
-            paddingBottom="xl"
+            marginBottom="32"
             gap="m"
             flex={3}
             horizontal="center"
@@ -118,8 +118,7 @@ export default function About() {
           <Column
             id={about.intro.title}
             fillWidth
-            minHeight="160"
-            vertical="center"
+            vertical="start"
             marginBottom="32"
           >
             {about.resume.display && (

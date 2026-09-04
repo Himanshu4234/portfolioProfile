@@ -245,6 +245,26 @@ html, body, #__next, main, [data-theme] {
   transform-style: preserve-3d;
 }
 
+/* Skills Matrix Responsive Grid */
+.skills-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .skills-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-matrix-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .page-spine {
   position: absolute;
   top: 0;

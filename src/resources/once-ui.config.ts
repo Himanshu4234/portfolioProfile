@@ -186,7 +186,7 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "/images/himanshu.jpeg",
+  logo: "/icon.png",
   type: "Person",
   name: "Himanshu Singh Chauhan",
   description: home.description,
