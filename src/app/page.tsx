@@ -68,7 +68,6 @@ export default function Home() {
             </RevealFx>
           )}
           <RevealFx
-            translateY="4"
             fillWidth
             horizontal="center"
             paddingBottom="16"
@@ -78,8 +77,7 @@ export default function Home() {
             </Heading>
           </RevealFx>
           <RevealFx
-            translateY="8"
-            delay={0.2}
+            delay={0.1}
             fillWidth
             horizontal="center"
             paddingBottom="32"
