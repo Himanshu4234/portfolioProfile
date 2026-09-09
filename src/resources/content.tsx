@@ -56,8 +56,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.webp",
   label: "Home",
-  title: `${person.name} | Frontend Engineer`,
-  description: `Official portfolio of ${person.name}, Frontend Engineer specializing in React.js, Next.js, and TypeScript with 3+ years of experience building high-performance web applications.`,
+  title: `${person.name} — Senior Frontend Engineer`,
+  description: `${person.name} is a Senior Frontend Engineer & React Specialist with 3+ years of experience building scalable, high-performance web applications, React architectures, and enterprise design systems.`,
   headline: person.name,
   featured: {
     display: true,
@@ -84,8 +84,8 @@ const home: Home = {
 const about: About = {
   path: "/about",
   label: "About",
-  title: `About ${person.name} | Senior Frontend Engineer`,
-  description: `Meet ${person.name}, Senior Frontend Engineer & Developer from ${person.state}. Experience in React, Next.js, and TypeScript architecture.`,
+  title: `${person.name} — About & Experience`,
+  description: `${person.name} is a Senior Frontend Engineer & Developer from ${person.state}. Experience in React.js, Next.js, TypeScript, and enterprise product development.`,
   tableOfContent: {
     display: true,
     subItems: false,
