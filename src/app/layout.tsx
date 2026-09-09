@@ -50,6 +50,10 @@ export default async function RootLayout({
         <meta name="google-site-verification" content="L5lW-LRoQ1QhXWIQn3-DCkvktkMga54qTacdsex-sIw" />
         <link rel="canonical" href={baseURL} />
         
+        {/* Explicit Site Name Metadata for Google Search */}
+        <meta property="og:site_name" content="Himanshu Singh Chauhan" />
+        <meta name="application-name" content="Himanshu Singh Chauhan Portfolio" />
+
         {/* Favicons & PWA Manifest for Mobile App Install */}
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -58,6 +62,7 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Himanshu" />
         <meta name="theme-color" content="#06b6d4" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

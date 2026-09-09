@@ -41,6 +41,7 @@ export const Footer = () => {
                   aria-label={item.name}
                   size="s"
                   variant="ghost"
+                  rel="me"
                 />
               ),
           )}

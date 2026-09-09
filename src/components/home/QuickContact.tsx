@@ -46,6 +46,7 @@ export const QuickContact = () => {
             href="https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/"
             variant="secondary"
             size="m"
+            rel="me"
           >
             LinkedIn Profile
           </Button>
@@ -53,8 +54,17 @@ export const QuickContact = () => {
             href="https://github.com/Himanshu4234"
             variant="tertiary"
             size="m"
+            rel="me"
           >
             GitHub Projects
+          </Button>
+          <Button
+            href="https://www.instagram.com/himanshu_chauhan0107"
+            variant="tertiary"
+            size="m"
+            rel="me"
+          >
+            Instagram
           </Button>
         </Row>
       </Column>

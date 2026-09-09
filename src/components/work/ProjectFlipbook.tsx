@@ -35,6 +35,11 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
   const [flipAnim, setFlipAnim] = useState<"flip-anim-next" | "flip-anim-prev" | "">("");
   const [viewMode, setViewMode] = useState<"flipbook" | "grid">("flipbook");
 
+  // Touch Swipe Gesture State
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const minSwipeDistance = 40;
+
   if (!projects || projects.length === 0) return null;
 
   const currentProject = projects[currentIndex];
@@ -68,6 +73,29 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
     }
   };
 
+  // Touch Swipe Handlers for Mobile
+  const onTouchStartHandler = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMoveHandler = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEndHandler = () => {
+    if (touchStart === null || touchEnd === null) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe && currentIndex < projects.length - 1) {
+      handleNext();
+    } else if (isRightSwipe && currentIndex > 0) {
+      handlePrev();
+    }
+  };
+
   return (
     <Column fillWidth gap="24" horizontal="center">
       {/* View Mode & Page Navigation Controls */}
@@ -97,7 +125,7 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
           </Button>
         </Row>
 
-        {/* Right: Flipbook Page Counter */}
+        {/* Right: Flipbook Page Counter & Mobile Swipe Hint */}
         {viewMode === "flipbook" && (
           <Row gap="12" vertical="center">
             <span className="subtle-badge">
@@ -109,20 +137,20 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
 
       {/* View 1: Flipbook View */}
       {viewMode === "flipbook" ? (
-        <Column fillWidth gap="20" className="flipbook-container">
+        <Column fillWidth gap="16" className="flipbook-container">
           <div
             className={`flipbook-book glass-card glass-card-accent ${flipAnim}`}
+            onTouchStart={onTouchStartHandler}
+            onTouchMove={onTouchMoveHandler}
+            onTouchEnd={onTouchEndHandler}
             style={{
-              padding: "32px",
-              minHeight: "480px",
+              padding: "24px",
+              minHeight: "420px",
             }}
           >
-            {/* Center Book Spine Seam */}
-            <div className="page-spine s-hide" />
-
             <Row
               fillWidth
-              gap="32"
+              gap="16"
               vertical="stretch"
               s={{ direction: "column" }}
             >
@@ -130,7 +158,7 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
               <Column
                 flex={6}
                 fillWidth
-                gap="16"
+                gap="12"
                 className="flipbook-page-left"
               >
                 <Row fillWidth horizontal="between" vertical="center">
@@ -144,6 +172,7 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
 
                 {/* Device Frame */}
                 <div
+                  className="flipbook-image-frame"
                   style={{
                     position: "relative",
                     width: "100%",
@@ -164,11 +193,10 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
                   />
                 </div>
 
-                <Row gap="8" wrap marginTop="4">
+                <Row gap="8" wrap marginTop="2">
                   <span className="skill-tag">React.js</span>
                   <span className="skill-tag">TypeScript</span>
                   <span className="skill-tag">Tailwind CSS</span>
-                  <span className="skill-tag">Production</span>
                 </Row>
               </Column>
 
@@ -176,11 +204,11 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
               <Column
                 flex={6}
                 fillWidth
-                gap="20"
+                gap="16"
                 vertical="between"
                 className="flipbook-page-right"
               >
-                <Column gap="12">
+                <Column gap="8">
                   <Row vertical="center" gap="8" wrap>
                     <span className="subtle-badge">CASE STUDY #{currentIndex + 1}</span>
                     {subtitle && (
@@ -198,14 +226,15 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
                     variant="body-default-m"
                     onBackground="neutral-weak"
                     wrap="balance"
-                    style={{ lineHeight: "1.65" }}
+                    className="flipbook-summary-mobile"
+                    style={{ lineHeight: "1.55" }}
                   >
                     {summary}
                   </Text>
                 </Column>
 
                 {/* Action Buttons & Flip Page Indicator */}
-                <Column gap="16">
+                <Column gap="12">
                   <Row gap="12" wrap vertical="center">
                     {link && (
                       <Button
@@ -226,6 +255,12 @@ export const ProjectFlipbook: React.FC<ProjectFlipbookProps> = ({ projects }) =>
                     >
                       Read Full Story
                     </Button>
+                  </Row>
+
+                  <Row hide s={{ hide: false }} horizontal="center" marginTop="4">
+                    <span className="subtle-badge" style={{ fontSize: "0.75rem", padding: "2px 10px" }}>
+                      👈 Swipe Left / Right to Flip 👉
+                    </span>
                   </Row>
                 </Column>
               </Column>

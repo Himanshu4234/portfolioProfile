@@ -8,16 +8,18 @@ import {
   RevealFx,
   Column,
   Row,
+  Badge,
+  Line,
 } from "@once-ui-system/core";
 import { person, about, home } from "@/resources";
 import Link from "next/link";
 
 export const HeroHeader = () => {
   return (
-    <Column fillWidth horizontal="center" gap="l" paddingTop="24">
+    <Column fillWidth horizontal="center" align="center" gap="l" paddingTop="24">
       {/* Profile Photo & Availability Status Badge */}
-      <RevealFx speed="fast">
-        <Row gap="16" vertical="center" s={{ direction: "column" }}>
+      <RevealFx speed="fast" fillWidth horizontal="center">
+        <Column fillWidth horizontal="center" align="center" gap="16">
           <Avatar
             src={person.avatar}
             size="xl"
@@ -26,11 +28,11 @@ export const HeroHeader = () => {
               boxShadow: "0 0 24px rgba(6, 182, 212, 0.35)",
             }}
           />
-          <Row gap="8" vertical="center" className="subtle-badge">
+          <Row gap="8" vertical="center" horizontal="center" align="center" className="subtle-badge">
             <span className="pulse-dot" />
             <span>AVAILABLE FOR SENIOR FRONTEND ROLES</span>
           </Row>
-        </Row>
+        </Column>
       </RevealFx>
 
       {/* Main Heading H1 */}
@@ -60,7 +62,7 @@ export const HeroHeader = () => {
       </RevealFx>
 
       {/* Detailed Hero Bio */}
-      <RevealFx speed="fast" delay={0.3} maxWidth="s" horizontal="center">
+      <RevealFx speed="fast" delay={0.3} maxWidth="s" horizontal="center" fillWidth>
         <Text
           wrap="balance"
           onBackground="neutral-weak"
@@ -74,54 +76,80 @@ export const HeroHeader = () => {
       </RevealFx>
 
       {/* Action Buttons */}
-      <RevealFx speed="fast" delay={0.4} horizontal="center">
-        <Row gap="16" vertical="center" wrap s={{ direction: "column", horizontal: "center" }}>
-          {/* Explore Projects Button */}
-          <Button
-            href="/work"
-            variant="primary"
-            size="m"
-            weight="default"
-            arrowIcon
-            className="btn-glow"
+      <RevealFx speed="fast" delay={0.4} fillWidth horizontal="center">
+        <Column fillWidth horizontal="center" align="center">
+          <Row
+            gap="16"
+            vertical="center"
+            horizontal="center"
+            align="center"
+            wrap
+            fillWidth
+            s={{ direction: "column", horizontal: "center" }}
           >
-            Explore Featured Work
-          </Button>
-
-          {/* Download Resume Button */}
-          {home.featured.display && (
+            {/* Explore Projects Button */}
             <Button
-              id="download-resume"
-              data-border="rounded"
-              href={home.featured.href}
-              variant="secondary"
+              href="/work"
+              variant="primary"
+              size="m"
+              weight="default"
+              arrowIcon
+              className="btn-glow"
+            >
+              Explore Featured Work
+            </Button>
+
+            {/* Download Resume Button (Highlighted Glass Badge) */}
+            {home.featured.display && (
+              <Row
+                fitWidth
+                border="brand-alpha-medium"
+                background="brand-alpha-weak"
+                radius="full"
+                padding="4"
+                gap="8"
+                vertical="center"
+                horizontal="center"
+                className="btn-glow"
+                style={{
+                  backdropFilter: "blur(var(--static-space-1))",
+                  boxShadow: "0 4px 20px rgba(6, 182, 212, 0.25)",
+                  border: "1px solid rgba(6, 182, 212, 0.4)",
+                  cursor: "pointer",
+                }}
+              >
+                <Badge
+                  background="brand-alpha-weak"
+                  paddingX="16"
+                  paddingY="4"
+                  onBackground="neutral-strong"
+                  textVariant="label-default-s"
+                  arrow={false}
+                >
+                  <Link href={home.featured.href} download style={{ textDecoration: "none" }}>
+                    <Row gap="12" vertical="center" horizontal="center" paddingY="2">
+                      <strong style={{ fontWeight: 700, fontSize: "0.95rem" }}>Download</strong>
+                      <Line background="brand-alpha-strong" vert height="16" />
+                      <Text marginRight="4" onBackground="brand-medium" weight="strong" style={{ fontSize: "0.95rem" }}>
+                        My Resume (PDF)
+                      </Text>
+                    </Row>
+                  </Link>
+                </Badge>
+              </Row>
+            )}
+
+            {/* Contact Button */}
+            <Button
+              href={`mailto:${person.email}`}
+              variant="tertiary"
               size="m"
               weight="default"
             >
-              <Row gap="8" vertical="center" paddingRight="4">
-                {about.avatar.display && (
-                  <Avatar
-                    marginRight="8"
-                    style={{ marginLeft: "-0.75rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                Download Resume
-              </Row>
+              Get In Touch
             </Button>
-          )}
-
-          {/* Contact Button */}
-          <Button
-            href={`mailto:${person.email}`}
-            variant="tertiary"
-            size="m"
-            weight="default"
-          >
-            Get In Touch
-          </Button>
-        </Row>
+          </Row>
+        </Column>
       </RevealFx>
     </Column>
   );

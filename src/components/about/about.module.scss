@@ -11,7 +11,7 @@
 
 
 .myNameStyle {
-    font-size: 3rem !important;
+    font-size: clamp(2.2rem, 6vw, 3.2rem) !important;
 }
 
 @media (max-width: breakpoints.$s) {
@@ -21,5 +21,8 @@
 
     .blockAlign {
         align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }

@@ -12,6 +12,7 @@ import {
   Schema,
   Row,
   Badge,
+  Line,
 } from "@once-ui-system/core";
 import { baseURL, about, person, social } from "@/resources";
 import TableOfContents from "@/components/about/TableOfContents";
@@ -79,48 +80,45 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column" }} horizontal="center">
+      <Column fillWidth horizontal="center" align="center" marginBottom="40">
         {about.avatar.display && (
-         <Column
-            className={styles.avatar}
-            position="sticky"
-            top="64"
-            fitHeight
-            s={{ position: "relative" }}
-            minWidth="160"
-            paddingX="l"
-            marginBottom="32"
-            gap="m"
-            flex={3}
+          <Column
+            fillWidth
             horizontal="center"
+            align="center"
+            gap="l"
+            marginBottom="32"
           >
-            <Avatar src={person.avatar} size="xl" />
-            <Row gap="8" vertical="center" horizontal="between">
-              <Icon onBackground="accent-weak" name="mobile" />
-              {person.mobileNumber}
+            <Avatar
+              src={person.avatar}
+              size="xl"
+              style={{
+                border: "2px solid rgba(6, 182, 212, 0.6)",
+                boxShadow: "0 0 28px rgba(6, 182, 212, 0.4)",
+              }}
+            />
+
+            <Row gap="24" vertical="center" horizontal="center" align="center" wrap marginTop="12" marginBottom="4">
+              <Row gap="8" vertical="center" className="subtle-badge" style={{ padding: "6px 14px" }}>
+                <Icon onBackground="accent-weak" name="mobile" />
+                <Text variant="body-default-s" weight="strong">{person.mobileNumber}</Text>
+              </Row>
+              <Row gap="8" vertical="center" className="subtle-badge" style={{ padding: "6px 14px" }}>
+                <Icon onBackground="accent-weak" name="globe" />
+                <Text variant="body-default-s" weight="strong">{person.state}</Text>
+              </Row>
             </Row>
-            <Row gap="8" vertical="center" horizontal="between">
-              <Icon onBackground="accent-weak" name="globe" />
-              {person.state}
-            </Row>
+
             {person.languages && person.languages.length > 0 && (
-              <Row wrap gap="8">
+              <Row wrap gap="12" horizontal="center" vertical="center" marginTop="4" marginBottom="12">
                 {person.languages.map((language, index) => (
-                  <Tag key={index} size="l">
+                  <Tag key={index} size="l" style={{ padding: "6px 16px" }}>
                     {language}
                   </Tag>
                 ))}
               </Row>
             )}
-          </Column>
-        )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <Column
-            id={about.intro.title}
-            fillWidth
-            vertical="start"
-            marginBottom="32"
-          >
+
             {about.resume.display && (
               <Row
                 fitWidth
@@ -129,47 +127,68 @@ export default function About() {
                 radius="full"
                 padding="4"
                 gap="8"
-                marginBottom="m"
+                marginTop="12"
+                marginBottom="20"
                 vertical="center"
-                className={styles.blockAlign}
+                horizontal="center"
+                className="btn-glow"
                 style={{
                   backdropFilter: "blur(var(--static-space-1))",
+                  boxShadow: "0 4px 20px rgba(6, 182, 212, 0.25)",
+                  border: "1px solid rgba(6, 182, 212, 0.4)",
+                  cursor: "pointer",
                 }}
               >
                 <Badge
                   background="brand-alpha-weak"
-                  paddingX="12"
+                  paddingX="16"
                   paddingY="4"
                   onBackground="neutral-strong"
                   textVariant="label-default-s"
                   arrow={false}
                 >
-                  <Link href={about.resume.link} download>
-                    <Row paddingY="2">{about.resume.title}</Row>
+                  <Link href={about.resume.link} download style={{ textDecoration: "none" }}>
+                    <Row gap="12" vertical="center" horizontal="center" paddingY="2">
+                      <strong style={{ fontWeight: 700, fontSize: "0.95rem" }}>Download</strong>
+                      <Line background="brand-alpha-strong" vert height="16" />
+                      <Text marginRight="4" onBackground="brand-medium" weight="strong" style={{ fontSize: "0.95rem" }}>
+                        My Resume (PDF)
+                      </Text>
+                    </Row>
                   </Link>
                 </Badge>
               </Row>
             )}
-            <Heading className={`${styles.textAlign} ${styles.myNameStyle}`} variant="display-strong-l">
+
+            <Heading
+              className={`${styles.textAlign} ${styles.myNameStyle}`}
+              variant="display-strong-l"
+              align="center"
+              marginTop="12"
+              marginBottom="4"
+            >
               {person.name}
             </Heading>
             <Text
               className={styles.textAlign}
               variant="display-default-xs"
-              onBackground="neutral-weak"
+              onBackground="brand-medium"
+              align="center"
+              weight="strong"
+              marginBottom="16"
             >
               {person.role}
             </Text>
+
             {social.length > 0 && (
               <Row
-                className={styles.blockAlign}
-                paddingTop="20"
-                paddingBottom="8"
-                gap="8"
+                paddingTop="12"
+                paddingBottom="16"
+                gap="16"
                 wrap
                 horizontal="center"
+                vertical="center"
                 fitWidth
-                data-border="rounded"
               >
                 {social.map(
                   (item) =>
@@ -181,9 +200,11 @@ export default function About() {
                             href={item.link}
                             prefixIcon={item.icon}
                             label={item.name}
-                            size="s"
+                            size="m"
                             weight="default"
                             variant="secondary"
+                            rel="me"
+                            className="btn-glow"
                           />
                         </Row>
                         <Row hide s={{ hide: false }}>
@@ -193,6 +214,8 @@ export default function About() {
                             href={item.link}
                             icon={item.icon}
                             variant="secondary"
+                            rel="me"
+                            className="btn-glow"
                           />
                         </Row>
                       </React.Fragment>
@@ -201,17 +224,28 @@ export default function About() {
               </Row>
             )}
           </Column>
+        )}
 
-          {about.intro.display && (
-            <Column
-              textVariant="body-default-l"
-              fillWidth
-              gap="m"
-              marginBottom="xl"
+        {about.intro.display && (
+          <Column
+            fillWidth
+            gap="m"
+            marginBottom="40"
+            marginTop="16"
+            horizontal="center"
+            align="center"
+          >
+            <Text
+              align="center"
+              variant="body-default-l"
+              onBackground="neutral-weak"
+              style={{ textAlign: "center", maxWidth: "42rem", lineHeight: "1.7" }}
             >
               {about.intro.description}
-            </Column>
-          )}
+            </Text>
+          </Column>
+        )}
+      </Column>
 
           {about.work.display && (
             <>
@@ -400,8 +434,6 @@ export default function About() {
               </Column>
             </>
           )}
-        </Column>
-      </Row>
-    </Column>
+      </Column>
   );
 }

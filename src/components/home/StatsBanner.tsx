@@ -33,6 +33,7 @@ export const StatsBanner = () => {
         gap="16"
         marginTop="24"
         marginBottom="16"
+        horizontal="center"
         s={{ direction: "column" }}
       >
         {stats.map((stat, idx) => (
@@ -41,15 +42,17 @@ export const StatsBanner = () => {
             flex={1}
             padding="20"
             gap="8"
+            horizontal="center"
+            align="center"
             className="glass-card"
           >
-            <Heading variant="display-strong-s" className="gradient-text">
+            <Heading variant="display-strong-s" align="center" className="gradient-text">
               {stat.value}
             </Heading>
-            <Text variant="heading-default-xs" onBackground="neutral-strong" weight="strong">
+            <Text variant="heading-default-xs" align="center" onBackground="neutral-strong" weight="strong">
               {stat.label}
             </Text>
-            <Text variant="body-default-xs" onBackground="neutral-weak">
+            <Text variant="body-default-xs" align="center" onBackground="neutral-weak">
               {stat.description}
             </Text>
           </Column>

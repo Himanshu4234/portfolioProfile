@@ -189,6 +189,35 @@ html, body, #__next, main, [data-theme] {
   transform: translateY(-2px);
 }
 
+/* Premium Resume Download Pill Button */
+.resume-pill-btn {
+  background: var(--neutral-alpha-weak, rgba(255, 255, 255, 0.08)) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(6, 182, 212, 0.4) !important;
+  border-radius: 9999px !important;
+  padding: 6px 16px !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+[data-theme="light"] .resume-pill-btn {
+  background: rgba(236, 254, 255, 0.95) !important;
+  border-color: rgba(6, 182, 212, 0.5) !important;
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.15) !important;
+}
+
+[data-theme="dark"] .resume-pill-btn {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border-color: rgba(6, 182, 212, 0.5) !important;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.25) !important;
+}
+
+.resume-pill-btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 28px rgba(6, 182, 212, 0.35) !important;
+  border-color: rgba(6, 182, 212, 0.8) !important;
+}
+
 .skill-tag {
   background: var(--neutral-alpha-weak, rgba(0, 0, 0, 0.04));
   border: 1px solid var(--neutral-alpha-medium, rgba(0, 0, 0, 0.12));
@@ -265,20 +294,27 @@ html, body, #__next, main, [data-theme] {
   }
 }
 
-.page-spine {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: linear-gradient(to right, rgba(0,0,0,0.15), rgba(255,255,255,0.12), rgba(0,0,0,0.15));
-  z-index: 10;
-  pointer-events: none;
-}
+
 
 @media (max-width: 768px) {
-  .page-spine {
-    display: none !important;
+  .flipbook-book {
+    padding: 16px !important;
+    min-height: auto !important;
+    border-radius: 16px !important;
+  }
+  
+  .flipbook-summary-mobile {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .flipbook-image-frame {
+    aspect-ratio: 16/9 !important;
+    max-height: 160px !important;
   }
 }
 
