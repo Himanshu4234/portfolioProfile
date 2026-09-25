@@ -1,0 +1,89 @@
+# Himanshu Singh Chauhan — Full AI Profile & Engineering Specification
+
+## Identity & Canonical URLs
+- **Canonical Name**: Himanshu Singh Chauhan
+- **Short Name / Monogram**: Himanshu Chauhan / HC
+- **Professional Title**: Senior Frontend Engineer & React Specialist
+- **Website**: https://himanshusinghchauhanportfolio.netlify.app
+- **Canonical Email**: himanshuchauhan85.hc@gmail.com
+- **Phone**: +91 9654801167
+- **LinkedIn**: https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/
+- **GitHub**: https://github.com/Himanshu4234
+- **Instagram**: https://www.instagram.com/himanshu_chauhan0107
+- **Location**: Haryana, India (UTC+5:30)
+
+---
+
+## Technical Summary
+Himanshu Singh Chauhan is a frontend engineering specialist with over 3 years of experience delivering robust, maintainable, and highly responsive user interfaces. He specializes in React.js, Next.js, TypeScript, JavaScript (ES6+), and modern CSS frameworks like Tailwind CSS. His engineering philosophy focuses on modular architecture, sub-second rendering, strict type-safety, and maximizing Core Web Vitals (LCP, CLS, INP).
+
+---
+
+## Complete Project Catalog
+
+### 1. Kiska Kitna Hisab — Group Expense Tracker & Instant UPI Settlement
+- **Live URL**: https://kiskakitnahisab.netlify.app/
+- **GitHub**: https://github.com/Himanshu4234
+- **Type**: Web Application (FinTech / Group Finance)
+- **Status**: Production / Live
+- **Summary**: An intuitive full-stack expense manager inspired by Splitwise, built specifically for the Indian payments ecosystem with direct UPI QR code and deep-link generation.
+- **Key Architecture & Features**:
+  - Supabase PostgreSQL database with Row Level Security (RLS) policies for encrypted per-group transactions.
+  - Greedy debt simplification algorithm minimizing settlement cashflows across group members.
+  - 1-click dynamic UPI payment links and printable QR codes supporting Google Pay, PhonePe, Paytm, and BHIM UPI.
+  - Responsive retro-modern receipt UI engineered with Tailwind CSS and React micro-interactions.
+
+### 2. Shopperce AI — Multi-Tenant E-Commerce Platform
+- **Live URL**: https://shopperce.ai/
+- **GitHub**: https://github.com/Himanshu4234
+- **Type**: Web Application (Enterprise Commerce)
+- **Status**: Production / Live
+- **Summary**: Scalable multi-tenant e-commerce system that enables enterprise partners to spin up branded, configurable storefronts.
+- **Key Architecture & Features**:
+  - Dynamic route and theme configuration loading brand tokens at runtime.
+  - Reusable, WCAG-compliant UI components across partner storefronts.
+  - Rich seller admin dashboard with charts for sales metrics, inventory management, and customer behavior.
+
+### 3. LiveLaw — Legal Journalism & Intelligence Portal
+- **Live URL**: https://www.livelaw.in/
+- **GitHub**: https://github.com/Himanshu4234
+- **Type**: Web Application (High-Traffic Media)
+- **Status**: Production / Live
+- **Summary**: India’s premier legal reporting platform serving 1M+ active monthly readers, lawyers, and judges.
+- **Key Architecture & Features**:
+  - Sub-second Largest Contentful Paint (LCP) and zero layout shift on article-dense pages.
+  - Dynamic live court reporting widgets and instant news feeds.
+  - High-traffic SEO schema integration maximizing Google News and Search impressions.
+
+### 4. NextLeap IT Solutions — Corporate Platform
+- **Live URL**: https://nextleapitsolutions.netlify.app/
+- **GitHub**: https://github.com/Himanshu4234
+- **Type**: Web Application (Corporate Technology Services)
+- **Status**: Production / Live
+- **Summary**: Corporate agency website engineered for high conversions and sub-second load times.
+- **Key Architecture & Features**:
+  - 30% reduction in Time-to-First-Byte (TTFB) with optimized asset delivery.
+  - Mobile-first, responsive layouts translated directly from Figma specifications.
+
+---
+
+## Work Experience
+- **Company**: Hocalwire Labs Pvt Ltd
+- **Role**: Software Engineer (Senior Frontend Focus)
+- **Period**: Jan 2023 – Present
+- **Impact Highlights**:
+  - Engineered core frontend components across 3 high-scale enterprise platforms.
+  - Reduced component delivery cycle time by 25% with standardized design tokens.
+  - Improved Lighthouse performance scores across client platforms by 35%+.
+
+---
+
+## Educational Background
+- **DAV Centenary College**: Bachelor of Computer Science (B.Sc. CS)
+- **AD Senior Secondary School**: Higher Secondary & Secondary Education
+
+---
+
+## Contact & Hiring Availability
+Himanshu Singh Chauhan is open for Senior Frontend Engineer, React Specialist, and UI Architecture roles, both remote and hybrid.
+Direct contact: himanshuchauhan85.hc@gmail.com | +91 9654801167

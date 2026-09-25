@@ -12,54 +12,48 @@ interface RouteGuardProps {
 
 const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
   const pathname = usePathname();
-  const [isRouteEnabled, setIsRouteEnabled] = useState(false);
-  const [isPasswordRequired, setIsPasswordRequired] = useState(false);
-  const [password, setPassword] = useState("");
+
+  const isRouteEnabled = (() => {
+    if (!pathname) return true;
+    if (pathname in routes) {
+      return Boolean(routes[pathname as keyof typeof routes]);
+    }
+    const dynamicRoutes = ["/blog", "/work", "/about"] as const;
+    for (const route of dynamicRoutes) {
+      if (pathname.startsWith(route)) {
+        return true;
+      }
+    }
+    return true;
+  })();
+
+  const isProtected = pathname ? Boolean(protectedRoutes[pathname as keyof typeof protectedRoutes]) : false;
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | undefined>(undefined);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(isProtected);
 
   useEffect(() => {
-    const performChecks = async () => {
-      setLoading(true);
-      setIsRouteEnabled(false);
-      setIsPasswordRequired(false);
-      setIsAuthenticated(false);
+    if (!isProtected) {
+      setLoading(false);
+      return;
+    }
 
-      const checkRouteEnabled = () => {
-        if (!pathname) return false;
-
-        if (pathname in routes) {
-          return routes[pathname as keyof typeof routes];
-        }
-
-        const dynamicRoutes = ["/blog", "/work"] as const;
-        for (const route of dynamicRoutes) {
-          if (pathname?.startsWith(route) && routes[route]) {
-            return true;
-          }
-        }
-
-        return false;
-      };
-
-      const routeEnabled = checkRouteEnabled();
-      setIsRouteEnabled(routeEnabled);
-
-      if (protectedRoutes[pathname as keyof typeof protectedRoutes]) {
-        setIsPasswordRequired(true);
-
+    const checkAuth = async () => {
+      try {
         const response = await fetch("/api/check-auth");
         if (response.ok) {
           setIsAuthenticated(true);
         }
+      } catch (e) {
+        // ignore
+      } finally {
+        setLoading(false);
       }
-
-      setLoading(false);
     };
 
-    performChecks();
-  }, [pathname]);
+    checkAuth();
+  }, [pathname, isProtected]);
 
   const handlePasswordSubmit = async () => {
     const response = await fetch("/api/authenticate", {
@@ -88,7 +82,7 @@ const RouteGuard: React.FC<RouteGuardProps> = ({ children }) => {
     return <NotFound />;
   }
 
-  if (isPasswordRequired && !isAuthenticated) {
+  if (isProtected && !isAuthenticated) {
     return (
       <Column paddingY="128" maxWidth={24} gap="24" center>
         <Heading align="center" wrap="balance">

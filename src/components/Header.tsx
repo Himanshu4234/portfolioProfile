@@ -1,207 +1,160 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { person } from "@/resources";
 
-import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
-
-import { routes, display, person, about, blog, work, gallery } from "@/resources";
-import { ThemeToggle } from "./ThemeToggle";
-import styles from "./Header.module.scss";
-
-type TimeDisplayProps = {
-  timeZone: string;
-  locale?: string; 
-};
-
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
-  const [currentTime, setCurrentTime] = useState("");
+export const Header: React.FC = () => {
+  const pathname = usePathname() ?? "";
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: false,
-      };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-      setCurrentTime(timeString);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
     };
-
-    updateTime();
-    const intervalId = setInterval(updateTime, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [timeZone, locale]);
-
-  return <>{currentTime}</>;
-};
-
-export default TimeDisplay;
-
-export const Header = () => {
-  const pathname = usePathname() ?? "";
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <>
-      <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
-      <Fade
-        hide
-        s={{ hide: false }}
-        fillWidth
-        position="fixed"
-        bottom="0"
-        to="top"
-        height="80"
-        zIndex={9}
-      />
-      <Row
-        fitHeight
-        className={styles.position}
-        position="sticky"
-        as="header"
-        zIndex={9}
-        fillWidth
-        padding="8"
-        horizontal="center"
-        data-border="rounded"
-        s={{
-          position: "fixed",
+    <header
+      style={{
+        position: "sticky",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        width: "100%",
+        padding: "16px 24px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        backdropFilter: isScrolled ? "blur(16px)" : "none",
+        WebkitBackdropFilter: isScrolled ? "blur(16px)" : "none",
+        background: isScrolled
+          ? "rgba(3, 7, 18, 0.75)"
+          : "transparent",
+        borderBottom: isScrolled ? "1px solid var(--border-subtle)" : "1px solid transparent",
+        transition: "all 0.3s ease",
+      }}
+    >
+      {/* Left Brand Logo */}
+      <Link
+        href="/"
+        style={{
+          textDecoration: "none",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
         }}
       >
-        <Row paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.state && <Row s={{ hide: true }}>{person.state}</Row>}
-        </Row>
-        <Row fillWidth horizontal="center">
-          <Row
-            background="page"
-            border="neutral-alpha-weak"
-            radius="m-4"
-            shadow="l"
-            padding="4"
-            horizontal="center"
-            zIndex={1}
-          >
-            <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
-              {routes["/"] && (
-                <ToggleButton
-                  prefixIcon="home"
-                  href="/"
-                  selected={pathname === "/"}
-                  aria-label="Home Page"
-                />
-              )}
-              <Line background="neutral-alpha-medium" vert maxHeight="24" />
-              {routes["/about"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href="/about"
-                      label={about.label}
-                      selected={pathname === "/about"}
-                      aria-label="About Himanshu"
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="person"
-                      href="/about"
-                      selected={pathname === "/about"}
-                      aria-label="About Himanshu"
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/work"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      label={work.label}
-                      selected={pathname.startsWith("/work")}
-                      aria-label="Projects and Work"
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="grid"
-                      href="/work"
-                      selected={pathname.startsWith("/work")}
-                      aria-label="Projects and Work"
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/blog"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      label={blog.label}
-                      selected={pathname.startsWith("/blog")}
-                      aria-label="Blog Articles"
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="book"
-                      href="/blog"
-                      selected={pathname.startsWith("/blog")}
-                      aria-label="Blog Articles"
-                    />
-                  </Row>
-                </>
-              )}
-              {routes["/gallery"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      label={gallery.label}
-                      selected={pathname.startsWith("/gallery")}
-                      aria-label="Photo Gallery"
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      selected={pathname.startsWith("/gallery")}
-                      aria-label="Photo Gallery"
-                    />
-                  </Row>
-                </>
-              )}
-              {display.themeSwitcher && (
-                <>
-                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
-                  <ThemeToggle />
-                </>
-              )}
-            </Row>
-          </Row>
-        </Row>
-        <Flex fillWidth horizontal="end" vertical="center">
-          <Flex
-            paddingRight="12"
-            horizontal="end"
-            vertical="center"
-            textVariant="body-default-s"
-            gap="20"
-          >
-            <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
-            </Flex>
-          </Flex>
-        </Flex>
-      </Row>
-    </>
+        <span
+          className="hero-gradient-name"
+          style={{
+            fontSize: "1.45rem",
+            fontWeight: 900,
+            letterSpacing: "-0.04em",
+          }}
+        >
+          HC
+        </span>
+      </Link>
+
+      {/* Center Nav Links on Desktop */}
+      <nav
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+          padding: "4px 8px",
+          borderRadius: "var(--radius-full)",
+          background: "rgba(15, 23, 42, 0.6)",
+          border: "1px solid var(--border-subtle)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+        className="hide-on-mobile"
+      >
+        <Link
+          href="/#home"
+          style={{
+            padding: "6px 14px",
+            borderRadius: "var(--radius-full)",
+            fontSize: "0.82rem",
+            fontWeight: 600,
+            color: pathname === "/" ? "#ffffff" : "var(--color-text-tertiary)",
+            background: pathname === "/" ? "rgba(99, 102, 241, 0.25)" : "transparent",
+            textDecoration: "none",
+            transition: "all 0.2s ease",
+          }}
+        >
+          Home
+        </Link>
+        <Link
+          href="/about"
+          style={{
+            padding: "6px 14px",
+            borderRadius: "var(--radius-full)",
+            fontSize: "0.82rem",
+            fontWeight: 600,
+            color: pathname === "/about" ? "#ffffff" : "var(--color-text-tertiary)",
+            background: pathname === "/about" ? "rgba(99, 102, 241, 0.25)" : "transparent",
+            textDecoration: "none",
+            transition: "all 0.2s ease",
+          }}
+        >
+          About
+        </Link>
+        <Link
+          href="/work"
+          style={{
+            padding: "6px 14px",
+            borderRadius: "var(--radius-full)",
+            fontSize: "0.82rem",
+            fontWeight: 600,
+            color: pathname.startsWith("/work") ? "#ffffff" : "var(--color-text-tertiary)",
+            background: pathname.startsWith("/work") ? "rgba(99, 102, 241, 0.25)" : "transparent",
+            textDecoration: "none",
+            transition: "all 0.2s ease",
+          }}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/#contact"
+          style={{
+            padding: "6px 14px",
+            borderRadius: "var(--radius-full)",
+            fontSize: "0.82rem",
+            fontWeight: 600,
+            color: "var(--color-text-tertiary)",
+            textDecoration: "none",
+            transition: "all 0.2s ease",
+          }}
+        >
+          Contact
+        </Link>
+      </nav>
+
+      {/* Right Action: Let's Connect CTA */}
+      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+        <a
+          href="mailto:himanshuchauhan85.hc@gmail.com"
+          className="btn-primary-indigo"
+          style={{ padding: "7px 16px", fontSize: "0.82rem" }}
+        >
+          <span>Let's Talk</span>
+        </a>
+      </div>
+
+      <style jsx>{`
+        @media (max-width: 640px) {
+          :global(.hide-on-mobile) {
+            display: none !important;
+          }
+        }
+      `}</style>
+    </header>
   );
 };

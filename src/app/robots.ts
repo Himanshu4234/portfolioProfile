@@ -4,7 +4,34 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: [
+          "*",
+          "Googlebot",
+          "Googlebot-Image",
+          "Googlebot-News",
+          "Bingbot",
+          "Slurp",
+          "DuckDuckBot",
+          "Baiduspider",
+          "YandexBot",
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "PerplexityBot",
+          "Applebot",
+          "Applebot-Extended",
+          "Google-Extended",
+          "Meta-ExternalAgent",
+          "FacebookBot",
+          "cohere-ai",
+          "Diffbot",
+          "CCBot",
+          "Twitterbot",
+          "LinkedInBot",
+        ],
         allow: "/",
       },
     ],
@@ -12,3 +39,4 @@ export default function robots() {
     host: baseURL,
   };
 }
+

@@ -1,22 +1,14 @@
-import {
-  Heading,
-  RevealFx,
-  Column,
-  Row,
-  Schema,
-  Meta,
-  Line,
-} from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
+import { Schema, Meta } from "@once-ui-system/core";
+import { home, about, person, baseURL } from "@/resources";
 import {
   HeroHeader,
-  StatsBanner,
-  SkillsMatrix,
-  ExperienceHighlights,
-  QuickContact,
+  AboutSection,
+  ProjectsSection,
+  GithubActivitySection,
+  ProjectInquiryBanner,
+  SkillsSection,
+  ExperienceTimeline,
+  ContactSection,
 } from "@/components/home";
 
 export async function generateMetadata() {
@@ -31,8 +23,8 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
-      {/* Schema WebPage JSON-LD */}
+    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      {/* Schema WebPage JSON-LD for Search Engines */}
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -47,63 +39,29 @@ export default function Home() {
         }}
       />
 
-      {/* 1. New Hero Section with Status Pill & H1 Name */}
+      {/* 1. Hero Section with 3D Celestial Canvas & Availability Badge */}
       <HeroHeader />
 
-      {/* 2. Key Metrics & Impact Banner */}
-      <StatsBanner />
+      {/* 2. About Me Section & "How I Work" Matrix */}
+      <AboutSection />
 
-      {/* 3. Featured Projects Showcase */}
-      <Column fillWidth gap="16" marginTop="24">
-        <RevealFx speed="fast">
-          <Column gap="8" className="watermark-header">
-            <span className="watermark-text">PORTFOLIO</span>
-            <Column gap="8" className="watermark-content">
-              <Row vertical="center" gap="12">
-                <span className="subtle-badge">FEATURED WORK</span>
-              </Row>
-              <Heading as="h2" variant="display-strong-s" wrap="balance">
-                Enterprise Applications & Products
-              </Heading>
-            </Column>
-          </Column>
-        </RevealFx>
-        <Projects />
-      </Column>
+      {/* 3. Commercial & Featured Projects with Interactive Filters */}
+      <ProjectsSection />
 
-      {/* 4. Technical Skills & Architecture Matrix */}
-      <SkillsMatrix />
+      {/* 4. GitHub Contributions & Commit Activity Heatmap */}
+      <GithubActivitySection />
 
-      {/* 6. Career Chapters & Experience Highlights */}
-      <ExperienceHighlights />
+      {/* 5. "Have a Project in Mind?" CTA Banner */}
+      <ProjectInquiryBanner />
 
-      {/* Optional Blog Posts */}
-      {routes["/blog"] && (
-        <Column fillWidth gap="24" marginBottom="l" marginTop="32">
-          <Row fillWidth paddingRight="64">
-            <Line maxWidth={48} />
-          </Row>
-          <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
-            <Row flex={1} paddingLeft="l" paddingTop="24">
-              <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Latest Insights
-              </Heading>
-            </Row>
-            <Row flex={3} paddingX="20">
-              <Posts range={[1, 2]} columns="2" />
-            </Row>
-          </Row>
-          <Row fillWidth paddingLeft="64" horizontal="end">
-            <Line maxWidth={48} />
-          </Row>
-        </Column>
-      )}
+      {/* 6. Skills & Frontend Architecture Stack */}
+      <SkillsSection />
 
-      {/* 7. Quick Contact CTA Block */}
-      <QuickContact />
+      {/* 7. Professional Journey & Education Timeline */}
+      <ExperienceTimeline />
 
-      {/* Mailchimp Newsletter (if enabled) */}
-      <Mailchimp />
-    </Column>
+      {/* 8. Quick Contact Section with 1-Click Copy & Socials */}
+      <ContactSection />
+    </div>
   );
 }

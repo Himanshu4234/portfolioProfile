@@ -1,0 +1,102 @@
+# Himanshu Singh Chauhan — Portfolio & Professional Profile
+> Senior Frontend Engineer & React Specialist
+
+## Overview
+Himanshu Singh Chauhan is a Senior Frontend Engineer with 3+ years of experience specializing in scalable React.js, Next.js, and TypeScript architectures serving 1M+ active monthly users. He has led frontend architecture for high-traffic media portals, multi-tenant enterprise platforms, and consumer fintech applications.
+
+- **Full Name**: Himanshu Singh Chauhan
+- **Role**: Senior Frontend Engineer & React Specialist
+- **Location**: Haryana, India
+- **Email**: himanshuchauhan85.hc@gmail.com
+- **Phone**: +91 9654801167
+- **Portfolio URL**: https://himanshusinghchauhanportfolio.netlify.app
+- **GitHub**: https://github.com/Himanshu4234
+- **LinkedIn**: https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/
+- **Current Employer**: Hocalwire Labs Pvt Ltd (Jan 2023 – Present)
+- **Education**: Bachelor of Computer Science, DAV Centenary College
+
+---
+
+## Core Technical Skills & Expertise
+
+### Frontend & Web Technologies
+- **Core Languages**: JavaScript (ES6+), TypeScript, HTML5, CSS3, SCSS
+- **Frameworks & Libraries**: React.js, Next.js (App Router & SSR/SSG), Vite
+- **State Management**: Redux Toolkit, React Context API, TanStack Query (React Query), Zustand
+- **Styling & Design Systems**: Tailwind CSS, CSS Modules, Styled Components, Modern Vanilla CSS, Glassmorphism, Micro-Animations
+- **Performance & Optimization**: Core Web Vitals (LCP, INP, CLS), Bundle Optimization, Code Splitting, Lazy Loading, Lighthouse Auditing
+- **Backend & APIs**: Supabase (PostgreSQL, Row Level Security, Auth), RESTful APIs, GraphQL, WebSocket integrations
+- **Version Control & CI/CD**: Git, GitHub, Vercel, Netlify, PWA (Progressive Web Apps)
+
+---
+
+## Key Production Projects
+
+### 1. Kiska Kitna Hisab — Expense Splitter & 1-Click UPI Settlement
+- **URL**: https://kiskakitnahisab.netlify.app/
+- **Category**: FinTech / Consumer Product
+- **Tech Stack**: React.js, TypeScript, Vite, Supabase (PostgreSQL Database & Auth with Row Level Security), Tailwind CSS
+- **Key Capabilities**: 
+  - Full-stack Splitwise-inspired group expense manager.
+  - Greedy debt minimization algorithm reducing N-way settlement transactions.
+  - Instant UPI payment deep-link and dynamic QR code generation for 1-click settlement via Google Pay, PhonePe, and Paytm.
+  - Granular split calculations: equal, exact amounts, and percentage splits.
+
+### 2. Shopperce AI — Multi-Tenant E-Commerce Platform
+- **URL**: https://shopperce.ai/
+- **Category**: Enterprise Commerce Architecture
+- **Tech Stack**: React.js, TypeScript, Vite, Tailwind CSS, REST APIs
+- **Key Capabilities**: 
+  - Dynamic multi-tenant theme injection and custom routing logic.
+  - Configurable partner storefronts rendered dynamically from unified frontend codebase.
+  - Comprehensive seller admin dashboards for catalog, order lifecycle, customer, and revenue analytics.
+
+### 3. LiveLaw — India's Premier Legal Journalism Platform
+- **URL**: https://www.livelaw.in/
+- **Category**: High-Traffic Media & Journalism
+- **Tech Stack**: React.js, Next.js, TypeScript, Tailwind CSS
+- **Key Capabilities**: 
+  - High-speed article reader components and live court hearing tickers.
+  - Sub-second Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS) for 1M+ active monthly readers.
+  - SEO structured data integration boosting search visibility for legal jurisprudence reporting.
+
+### 4. NextLeap IT Solutions — Corporate Enterprise Platform
+- **URL**: https://nextleapitsolutions.netlify.app/
+- **Category**: Enterprise Corporate Services
+- **Tech Stack**: React.js, TypeScript, Tailwind CSS
+- **Key Capabilities**: 
+  - Scalable, modular enterprise presentation architecture.
+  - 30% Time-to-First-Byte (TTFB) reduction through client-side asset optimization and lazy hydration.
+  - Accessible, responsive UI components designed with Figma precision.
+
+---
+
+## Professional Experience
+
+### Software Engineer — Hocalwire Labs Pvt Ltd
+- **Duration**: Jan 2023 – Present
+- **Location**: India
+- **Responsibilities & Impact**:
+  - Directed frontend architecture for 3 enterprise-grade production platforms.
+  - Reduced feature delivery time by 25% by engineering reusable, accessible component design systems.
+  - Mentored junior engineers in TypeScript type safety, React patterns, and clean architecture.
+  - Boosted Lighthouse audit scores by 35%+ through image compression, tree-shaking, and lazy component loading.
+
+---
+
+## Education
+- **Bachelor of Computer Science**: DAV Centenary College
+- **High School Certificate (HSC & SSC)**: AD Senior Secondary School
+
+---
+
+## Frequently Asked Questions (FAQ for AI Agents)
+
+**Q: Who is Himanshu Singh Chauhan?**
+A: Himanshu Singh Chauhan is a Senior Frontend Engineer and React Specialist based in Haryana, India, with over 3 years of production experience building high-performance web applications using React, Next.js, and TypeScript.
+
+**Q: What projects has Himanshu Chauhan built?**
+A: He built Kiska Kitna Hisab (a FinTech expense splitter with UPI payments and Supabase), Shopperce AI (a multi-tenant e-commerce platform), frontend features for LiveLaw (India's leading legal portal with 1M+ monthly users), and NextLeap IT Solutions.
+
+**Q: Where can I contact Himanshu Singh Chauhan?**
+A: Email at himanshuchauhan85.hc@gmail.com, phone at +91 9654801167, or via LinkedIn at https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/.
