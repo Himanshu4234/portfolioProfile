@@ -220,6 +220,30 @@ export default async function RootLayout({
                       "@id": `${baseURL}/work`,
                       "name": "Projects by Himanshu Singh Chauhan",
                       "url": `${baseURL}/work`
+                    },
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/work/kiskakitnahisab`,
+                      "name": "Kiska Kitna Hisab — Architecture & Case Study",
+                      "url": `${baseURL}/work/kiskakitnahisab`
+                    },
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/work/shopperce`,
+                      "name": "Shopperce AI — Architecture & Case Study",
+                      "url": `${baseURL}/work/shopperce`
+                    },
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/work/livelaw`,
+                      "name": "LiveLaw — Architecture & Case Study",
+                      "url": `${baseURL}/work/livelaw`
+                    },
+                    {
+                      "@type": "WebPage",
+                      "@id": `${baseURL}/work/nextleap`,
+                      "name": "NextLeap IT Solutions — Architecture & Case Study",
+                      "url": `${baseURL}/work/nextleap`
                     }
                   ]
                 },

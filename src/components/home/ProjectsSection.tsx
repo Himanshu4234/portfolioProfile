@@ -44,7 +44,7 @@ const allProjects: ProjectItem[] = [
     tags: ["React", "Supabase", "PostgreSQL", "TypeScript", "Tailwind CSS", "Vite"],
     liveUrl: "https://kiskakitnahisab.netlify.app/",
     githubUrl: "https://github.com/Himanshu4234",
-    caseStudySlug: "automate-design-handovers-with-a-figma-to-code-pipeline",
+    caseStudySlug: "kiskakitnahisab",
   },
   {
     id: "shopperce",
@@ -63,7 +63,7 @@ const allProjects: ProjectItem[] = [
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "REST APIs"],
     liveUrl: "https://shopperce.ai/",
     githubUrl: "https://github.com/Himanshu4234",
-    caseStudySlug: "automate-design-handovers-with-a-figma-to-code-pipeline",
+    caseStudySlug: "shopperce",
   },
   {
     id: "livelaw",
@@ -81,7 +81,7 @@ const allProjects: ProjectItem[] = [
     ],
     tags: ["React", "Next.js", "TypeScript", "Core Web Vitals", "SEO Architecture"],
     liveUrl: "https://www.livelaw.in/",
-    caseStudySlug: "automate-design-handovers-with-a-figma-to-code-pipeline",
+    caseStudySlug: "livelaw",
   },
   {
     id: "nextleap",
@@ -99,7 +99,7 @@ const allProjects: ProjectItem[] = [
     ],
     tags: ["React", "TypeScript", "Tailwind CSS", "SEO Architecture"],
     liveUrl: "https://nextleapitsolutions.netlify.app/",
-    caseStudySlug: "automate-design-handovers-with-a-figma-to-code-pipeline",
+    caseStudySlug: "nextleap",
   },
 ];
 
@@ -320,6 +320,17 @@ export const ProjectsSection: React.FC = () => {
                     <span>Visit Live</span>
                     <FaArrowUpRightFromSquare size={12} />
                   </a>
+                )}
+
+                {project.caseStudySlug && (
+                  <Link
+                    href={`/work/${project.caseStudySlug}`}
+                    className="btn-secondary-glass"
+                    style={{ padding: "8px 14px", fontSize: "0.82rem", display: "inline-flex", alignItems: "center", gap: "6px" }}
+                  >
+                    <FaBookOpen size={12} style={{ color: "var(--color-primary-light)" }} />
+                    <span>Case Study</span>
+                  </Link>
                 )}
 
                 {project.githubUrl && (

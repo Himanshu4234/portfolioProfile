@@ -24,6 +24,7 @@ export default function Work() {
     {
       title: "Shopperce AI — Multi-Tenant E-Commerce Platform",
       badge: "ENTERPRISE COMMERCE",
+      slug: "shopperce",
       isLive: true,
       description:
         "A customizable eCommerce platform enabling partners to deploy custom-branded storefronts dynamically. Built dynamic routing & theming using React + Vite with comprehensive seller admin dashboards for catalog, orders, and revenue analytics.",
@@ -40,6 +41,7 @@ export default function Work() {
     {
       title: "LiveLaw — India's Premier Legal News Platform",
       badge: "HIGH-TRAFFIC MEDIA",
+      slug: "livelaw",
       isLive: true,
       description:
         "Engineered high-performance UI components and optimized Core Web Vitals (LCP/CLS) for India's leading legal journalism platform serving over 1M+ monthly readers. Implemented dynamic, scalable layouts for large volumes of daily news updates.",
@@ -55,6 +57,7 @@ export default function Work() {
     {
       title: "NextLeap IT Solutions — Corporate Platform",
       badge: "CORPORATE SERVICES",
+      slug: "nextleap",
       isLive: true,
       description:
         "Built a scalable IT services corporate website using React + TypeScript. Implemented SEO strategies, improved TTFB by 30%, and created modular, API-driven pages with mobile-first design.",
@@ -70,6 +73,7 @@ export default function Work() {
     {
       title: "Kiska Kitna Hisab — Expense Splitter & UPI Settle App",
       badge: "FINTECH / PRODUCT",
+      slug: "kiskakitnahisab",
       isLive: true,
       description:
         "A full-stack Splitwise-inspired group expense tracker built with React, TypeScript, and Supabase backend (PostgreSQL database & Auth). Features itemised expense logging, Row Level Security (RLS), greedy debt simplification algorithms, and instant UPI payment QR & deep links (Google Pay, PhonePe, Paytm).",
@@ -258,6 +262,17 @@ export default function Work() {
                     <span>Visit Live Application</span>
                     <FaArrowUpRightFromSquare size={12} />
                   </a>
+                )}
+
+                {project.slug && (
+                  <Link
+                    href={`/work/${project.slug}`}
+                    className="btn-secondary-glass"
+                    style={{ padding: "8px 14px", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "6px" }}
+                  >
+                    <FaBookOpen size={12} style={{ color: "var(--color-primary-light)" }} />
+                    <span>Case Study</span>
+                  </Link>
                 )}
 
                 {project.githubUrl && (
