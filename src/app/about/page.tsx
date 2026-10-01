@@ -13,6 +13,7 @@ import {
   FaCircleCheck,
   FaGithub,
   FaLinkedin,
+  FaInstagram,
   FaEnvelope,
   FaArrowUpRightFromSquare,
 } from "react-icons/fa6";
@@ -187,6 +188,16 @@ export default function About() {
             >
               <FaLinkedin size={14} />
               <span>LinkedIn</span>
+            </a>
+
+            <a
+              href="https://www.instagram.com/himanshu_chauhan0107"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary-glass"
+            >
+              <FaInstagram size={14} />
+              <span>Instagram</span>
             </a>
 
             <a

@@ -7,6 +7,7 @@ import {
   FaCheck,
   FaLinkedin,
   FaGithub,
+  FaInstagram,
   FaArrowRight,
   FaPaperPlane,
 } from "react-icons/fa6";
@@ -210,6 +211,48 @@ export const ContactSection: React.FC = () => {
                 </p>
                 <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--color-text-primary)", margin: 0 }}>
                   @Himanshu4234
+                </p>
+              </div>
+            </div>
+            <FaArrowRight size={14} style={{ color: "var(--color-text-tertiary)" }} />
+          </a>
+
+          {/* Instagram Card */}
+          <a
+            href="https://www.instagram.com/himanshu_chauhan0107"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-card"
+            style={{
+              padding: "24px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textDecoration: "none",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "14px", minWidth: 0 }}>
+              <div
+                style={{
+                  width: "42px",
+                  height: "42px",
+                  borderRadius: "var(--radius-sm)",
+                  background: "rgba(225, 48, 108, 0.15)",
+                  color: "#e1306c",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                }}
+              >
+                <FaInstagram size={18} />
+              </div>
+              <div>
+                <p style={{ fontSize: "0.72rem", color: "var(--color-text-tertiary)", margin: "0 0 2px 0", textTransform: "uppercase", fontWeight: 700 }}>
+                  Instagram
+                </p>
+                <p style={{ fontSize: "0.88rem", fontWeight: 600, color: "var(--color-text-primary)", margin: 0 }}>
+                  @himanshu_chauhan0107
                 </p>
               </div>
             </div>

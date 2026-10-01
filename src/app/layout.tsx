@@ -54,6 +54,7 @@ export default async function RootLayout({
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Profile" />
         <link rel="author" href="https://github.com/Himanshu4234" />
         <link rel="me" href="https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/" />
+        <link rel="me" href="https://www.instagram.com/himanshu_chauhan0107" />
         <link rel="me" href="https://github.com/Himanshu4234" />
 
         {/* Performance Preconnects for Core Web Vitals */}
@@ -64,7 +65,7 @@ export default async function RootLayout({
         {/* Search Engine High-Ranking Keywords & Metadata */}
         <meta
           name="keywords"
-          content="Himanshu Singh Chauhan, Himanshu Chauhan, Himanshu Chauhan Frontend, Senior Frontend Engineer, React Specialist, Next.js Developer, TypeScript Expert, Frontend Architect India, Hocalwire Labs, Kiska Kitna Hisab, Shopperce AI, LiveLaw Frontend, NextLeap IT Solutions, Web Developer Haryana, React.js Specialist, High Performance Web Apps, Core Web Vitals Specialist"
+          content="Himanshu Singh Chauhan, Himanshu Chauhan, himanshu_chauhan0107, Himanshu Chauhan Frontend, Senior Frontend Engineer, React Specialist, Next.js Developer, TypeScript Expert, Frontend Architect India, Hocalwire Labs, Kiska Kitna Hisab, Shopperce AI, LiveLaw Frontend, NextLeap IT Solutions, Web Developer Haryana, React.js Specialist, High Performance Web Apps, Core Web Vitals Specialist"
         />
         <meta name="author" content="Himanshu Singh Chauhan" />
         <meta name="creator" content="Himanshu Singh Chauhan" />
@@ -141,7 +142,6 @@ export default async function RootLayout({
                   "description": "Senior Frontend Engineer with 3+ years of experience specializing in React.js, Next.js, TypeScript, and high-performance web architecture.",
                   "url": baseURL,
                   "image": `${baseURL}/images/himanshu.jpeg`,
-                  "telephone": "+91 9654801167",
                   "email": "himanshuchauhan85.hc@gmail.com",
                   "address": {
                     "@type": "PostalAddress",
@@ -303,7 +303,7 @@ export default async function RootLayout({
                       "name": "How can I contact Himanshu Singh Chauhan for hiring or projects?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "You can reach Himanshu directly via email at himanshuchauhan85.hc@gmail.com, phone at +91 9654801167, or via LinkedIn at https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/."
+                        "text": "You can reach Himanshu directly via email at himanshuchauhan85.hc@gmail.com, Instagram @himanshu_chauhan0107 (https://www.instagram.com/himanshu_chauhan0107), or via LinkedIn at https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/."
                       }
                     }
                   ]

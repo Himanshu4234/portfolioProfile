@@ -8,10 +8,10 @@ Himanshu Singh Chauhan is a Senior Frontend Engineer with 3+ years of experience
 - **Role**: Senior Frontend Engineer & React Specialist
 - **Location**: Haryana, India
 - **Email**: himanshuchauhan85.hc@gmail.com
-- **Phone**: +91 9654801167
 - **Portfolio URL**: https://himanshusinghchauhanportfolio.netlify.app
 - **GitHub**: https://github.com/Himanshu4234
 - **LinkedIn**: https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/
+- **Instagram**: https://www.instagram.com/himanshu_chauhan0107 (@himanshu_chauhan0107)
 - **Current Employer**: Hocalwire Labs Pvt Ltd (Jan 2023 – Present)
 - **Education**: Bachelor of Computer Science, DAV Centenary College
 
@@ -99,4 +99,4 @@ A: Himanshu Singh Chauhan is a Senior Frontend Engineer and React Specialist bas
 A: He built Kiska Kitna Hisab (a FinTech expense splitter with UPI payments and Supabase), Shopperce AI (a multi-tenant e-commerce platform), frontend features for LiveLaw (India's leading legal portal with 1M+ monthly users), and NextLeap IT Solutions.
 
 **Q: Where can I contact Himanshu Singh Chauhan?**
-A: Email at himanshuchauhan85.hc@gmail.com, phone at +91 9654801167, or via LinkedIn at https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/.
+A: Email at himanshuchauhan85.hc@gmail.com, Instagram @himanshu_chauhan0107 (https://www.instagram.com/himanshu_chauhan0107), or via LinkedIn at https://www.linkedin.com/in/himanshu-singh-chauhan-6828b116a/.
