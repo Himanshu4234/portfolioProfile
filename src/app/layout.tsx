@@ -202,7 +202,11 @@ export default async function RootLayout({
                   "@type": "WebSite",
                   "@id": `${baseURL}/#website`,
                   "url": baseURL,
-                  "name": "Himanshu Singh Chauhan Portfolio",
+                  "name": "Himanshu Singh Chauhan",
+                  "alternateName": [
+                    "Himanshu Chauhan",
+                    "Himanshu Singh Chauhan Portfolio"
+                  ],
                   "description": "Official engineering portfolio of Himanshu Singh Chauhan, Senior Frontend Engineer.",
                   "inLanguage": "en-US",
                   "publisher": {
